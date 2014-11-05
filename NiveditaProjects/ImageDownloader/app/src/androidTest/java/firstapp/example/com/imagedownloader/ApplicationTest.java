@@ -1,4 +1,4 @@
-package firstapp.example.com.asynctasks;
+package firstapp.example.com.imagedownloader;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

@@ -1,5 +1,6 @@
 package firstapp.example.com.revealtransition;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,7 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.view.MotionEvent;
-
+import android.widget.ViewAnimator;
+import android.graphics.drawable.Drawable;
 
 public class MyActivity extends ActionBarActivity {
 
@@ -39,12 +41,18 @@ public class MyActivity extends ActionBarActivity {
     }
 
     private void crossfade(){
-        mContentView.setAlpha(0f);
+       /* mContentView.setAlpha(0f);
         mContentView.setVisibility(View.VISIBLE);
         mContentView.animate()
                 .alpha(1f)
                 .setDuration(mShortAnimationDuration)
-                .setListener(null);
+                .setListener(null);*/
+
+        int cx = (mContentView.getLeft() + mContentView.getRight() ) / 2;
+        int cy = (mContentView).getTop() + mContentView.getBottom() )
+
+        int finalRadius = mContentView.getWidth();
+        Animator anim= ViewAnimator
     }
 
 
