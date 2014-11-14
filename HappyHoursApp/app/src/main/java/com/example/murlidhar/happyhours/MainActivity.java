@@ -1,6 +1,7 @@
 package com.example.murlidhar.happyhours;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,7 +33,10 @@ public class MainActivity extends ActionBarActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String restPicked = "You selected " + String.valueOf(parent.getItemAtPosition(position));
 
-                Toast.makeText(MainActivity.this, restPicked, Toast.LENGTH_SHORT).show() ;
+               // Toast.makeText(MainActivity.this, restPicked, Toast.LENGTH_SHORT).show() ;
+
+                Intent newActivity = new Intent(view.getContext(),RestaurantDetails.class);
+                startActivity(newActivity);
             }
         });
     }
