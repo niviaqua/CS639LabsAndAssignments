@@ -9,36 +9,49 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ExpandableListView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.app.Activity;
+
 
 
 public class MainActivity extends ActionBarActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String[] restaurants= {"Aceluck", "Atomic Wings", "Curry Hut", "Baluchis", "Subway", "EOS", "Market Cafe", "Thai Select", "Hells Kitchen", "HK Lounge", "Dave's Tavern", "Pie Face", "Shorty's"};
 
-        final ListAdapter theAdapter= new MyAdapter(this, restaurants);
 
-        ListView theListView =(ListView) findViewById(R.id.listView);
+        final String[] restaurants = {"Aceluck", "Atomic Wings", "Curry Hut", "Baluchis", "Subway", "EOS", "Market Cafe", "Thai Select", "Hells Kitchen", "HK Lounge", "Dave's Tavern", "Pie Face", "Shorty's"};
 
+        final ListAdapter theAdapter = new MyAdapter(this, restaurants);
+
+        ListView theListView = (ListView) findViewById(R.id.listView);
         theListView.setAdapter(theAdapter);
         theListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String restPicked = "You selected " + String.valueOf(parent.getItemAtPosition(position));
+                //String test= String.valueOf(parent.getItemAtPosition(position));
+                Toast.makeText(MainActivity.this, restPicked, Toast.LENGTH_SHORT).show();
+               // TextView txt= (TextView) findViewById(R.id.textView);
+               // txt.setText(test);
+                //Intent newActivity = new Intent(view.getContext(),MyAdapter.class);
+                //startActivity(newActivity);
 
-               // Toast.makeText(MainActivity.this, restPicked, Toast.LENGTH_SHORT).show() ;
 
-                Intent newActivity = new Intent(view.getContext(),RestaurantDetails.class);
-                startActivity(newActivity);
+
+                Intent restInfo = new Intent(view.getContext(), ResaturantDetails.class);
+                restInfo.putExtra("restname", restaurants);
+                startActivity(restInfo);
+
             }
         });
+
     }
 
 
