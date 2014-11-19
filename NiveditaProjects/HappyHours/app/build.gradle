@@ -5,8 +5,8 @@ android {
     buildToolsVersion "21.1.0"
 
     defaultConfig {
-        applicationId "firstapp.example.com.happyhours"
-        minSdkVersion 11
+        applicationId "com.example.nivedita.happyhours"
+        minSdkVersion 9
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -22,4 +22,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.0'
+    compile 'com.android.support:support-v4:21.0.0'
 }
