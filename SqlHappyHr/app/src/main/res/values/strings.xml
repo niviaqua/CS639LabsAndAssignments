@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ListView CusrsorAdapter</string>
+ <string name="some_text">
+     Happy Hours
+ </string>
+ <string name="some_hint">
+  Filter by Address, StreetName, Zipcode&#8230;
+ </string>
+</resources>
+ 
