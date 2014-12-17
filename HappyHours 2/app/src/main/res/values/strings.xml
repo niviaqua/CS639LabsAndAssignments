@@ -4,5 +4,6 @@
     <string name="app_name">Happy Hours</string>
     <string name="title_item_list">Happy Hours</string>
     <string name="title_item_detail">Happy Hours</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>

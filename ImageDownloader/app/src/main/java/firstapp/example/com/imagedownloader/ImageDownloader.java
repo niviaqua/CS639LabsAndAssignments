@@ -31,13 +31,15 @@ public class ImageDownloader extends AsyncTask<String, Integer, Bitmap> {
         try {
             URL url = new URL(params[0]);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            if (con.getResponseCode() != HttpURLConnection.HTTP_OK) {
+            if (con.getResponseCode() != HttpURLConnection.HTTP_OK)
+            {
                 throw new Exception("Failed to connect");
             }
             InputStream is = con.getInputStream();
             publishProgress(0);
+            Bitmap bit= BitmapFactory.decodeStream(is);
             is.close();
-            return BitmapFactory.decodeStream(is);
+            return bit;
         } catch (Exception e) {
             Log.e("Image", "Failed to load image", e);
             Log.e("error", e.getMessage());

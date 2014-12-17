@@ -64,13 +64,7 @@
         android:layout_marginTop="5dp"
         />
 
-    <ImageView
-        android:id="@+id/childImage"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="5dp"
-android:visibility="invisible"
-         />
+
 
     <ImageView
         android:layout_width="50dp"
