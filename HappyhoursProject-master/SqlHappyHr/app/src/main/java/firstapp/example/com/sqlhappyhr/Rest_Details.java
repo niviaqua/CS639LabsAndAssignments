@@ -33,7 +33,7 @@ public class Rest_Details extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         // To display restaurant details on second screen
-        TextView name,address,phone;
+        TextView name,address,phone,offers;
 
         // for call and map button
         Button call,map;
@@ -50,10 +50,13 @@ public class Rest_Details extends Activity
             name = (TextView)findViewById(R.id.restName);
             address = (TextView)findViewById(R.id.restAddress);
             phone = (TextView)findViewById(R.id.restPhone);
+            offers= (TextView)findViewById(R.id.txtvwoffer);
+
 
             name.setText(value[0]);
             address.setText(value[1]);
             phone.setText(value[2]);
+            offers.setText(value[4]);
 
             // set restaurant image from URL we got from intent
             async imageDownload = new async(this);

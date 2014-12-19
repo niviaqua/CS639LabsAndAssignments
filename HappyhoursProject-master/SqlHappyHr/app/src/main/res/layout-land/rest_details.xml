@@ -73,6 +73,19 @@
         android:background="@drawable/icon"
         android:textSize="18dp"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/txtvwoffer"
+        android:textSize="20dp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="#990000"
+        android:layout_below="@+id/restPhone"
+        android:layout_centerHorizontal="true" />
+
+
 
 
 </RelativeLayout>

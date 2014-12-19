@@ -109,8 +109,9 @@ public class AndroidListViewCursorAdaptorActivity extends Activity
                 String restAddress = cursor.getString(cursor.getColumnIndexOrThrow("address"));
                 String restPhone = cursor.getString(cursor.getColumnIndexOrThrow("phone"));
                 String restImage = cursor.getString(cursor.getColumnIndexOrThrow("restimage"));
+                String restOffers = cursor.getString(cursor.getColumnIndexOrThrow("offers"));
 
-                String []restDetails = {restName,restAddress,restPhone,restImage};
+                String []restDetails = {restName,restAddress,restPhone,restImage, restOffers};
 
                 intent.putExtra("RestDetails",restDetails);
                 startActivity(intent);

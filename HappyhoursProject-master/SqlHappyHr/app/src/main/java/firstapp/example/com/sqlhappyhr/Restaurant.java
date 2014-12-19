@@ -11,6 +11,7 @@ public class Restaurant
     String phone = null;
     String offers = null;
     String time = null;
+
     public Integer getId() {
         return id;
     }
